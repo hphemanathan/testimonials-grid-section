@@ -133,4 +133,16 @@ body {
   font-size: 0.8125rem;
   font-weight: 500;
   background-color: var(--bg-color);
+
+}
+
+.container {
+    margin: auto;
+    margin-top: var(--mar-t-5);
+    width: min(90%);
+
+}
+
+.footer {
+    margin-top: auto;
 }
