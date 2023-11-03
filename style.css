@@ -94,6 +94,7 @@ h4 {
   --pad-tb-2_5-rl-2: 2.5rem 2rem;
   --pad-rl-1_75: 0 1.75rem;
   --pad-rl-2: 0 2rem;
+  --pad-t-1_62: 1.62rem;
   --pad-b-1_75: 1.75rem;
   --pad-t-2_5: 2.5rem;
   --pad-b-2: 2rem;
@@ -145,6 +146,36 @@ body {
 
 .testimonial_card {
   background-color: var(--bg-card-white);
+}
+
+.testimonial_card > * {
+  padding: var(--pad-rl-2);
+}
+
+.testimonial_card_profile {
+  padding-top: var(--pad-t-1_62);
+  display: flex;
+  align-items: center;
+  gap: 1.06rem;
+  padding-bottom: var(--pad-t-1_62);
+}
+
+.testimonial_card_img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+.testimonial_card_name {
+  line-height: 1;
+}
+
+.testimonial_card_type {
+  font-size: 0.6875rem;
+}
+
+.testimonia_card_text {
+  padding-bottom: var(--pad-b-2);
 }
 
 .testimonial_card:not(:nth-child(5)) {
