@@ -143,11 +143,19 @@ body {
   margin-top: var(--mar-t-5);
   margin-bottom: var(--mar-b-1_5);
   width: min(90%);
+
+  @media (min-width: 43.75em) {
+    width: min(90%);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 2rem;
+  }
 }
 
 .testimonial_card {
   background-color: var(--bg-card-white);
   border-radius: 0.5rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
 }
 
 .testimonial_card > * {
@@ -197,8 +205,48 @@ body {
   margin-bottom: var(--mar-b-1);
 }
 
+.testimonial_card_daniel > * {
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_daniel .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
 .testimonial_card_daniel h1 {
   margin-bottom: var(--mar-b-2_5);
+}
+
+.testimonial_card_jonathan {
+  background-color: var(--bg-card-grey);
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_jonathan .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_jeanette,
+.testimonial_card_kira {
+  background-color: var(--bg-card-white);
+  color: var(--bg-card-grey);
+}
+
+.testimonial_card_jonathan .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_patrick {
+  background-color: var(--bg-card-black);
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_patrick .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
 }
 
 .footer {
