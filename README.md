@@ -19,6 +19,7 @@ Testimonial grid section using HTML5, CSS3, Flexbox with Grid
 
 ### Screenshot
 
+![MacBook Pro-1699105278433](https://github.com/hphemanathan/testimonials-grid-section/assets/18226707/359138ea-19de-4f85-9264-49746d34fdee)
 
 
 ### Links
