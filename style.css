@@ -142,13 +142,13 @@ body {
   margin: auto;
   margin-top: var(--mar-t-5);
   margin-bottom: var(--mar-b-1_5);
-  width: min(90%);
+  width: min(90%, 44rem);
 
-  @media (min-width: 43.75em) {
+  @media (min-width: 70.5em) {
     width: min(90%);
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    column-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -197,6 +197,10 @@ body {
 
 .testimonial_card:not(:nth-child(5)) {
   margin-bottom: var(--mar-b-1_5);
+
+  @media (min-width: 70.5em) {
+    margin-bottom: 0;
+  }
 }
 
 .testimonial_heading {
@@ -212,6 +216,13 @@ body {
 .testimonial_card_daniel .testimonial_card_type,
 .testimonial_text {
   opacity: 50%;
+}
+
+.testimonial_card_daniel,
+.testimonial_card_patrick {
+  @media (min-width: 70.5em) {
+    grid-column: span 2;
+  }
 }
 
 .testimonial_card_daniel h1 {
@@ -247,6 +258,13 @@ body {
 .testimonial_card_patrick .testimonial_card_type,
 .testimonial_text {
   opacity: 50%;
+}
+
+.testimonial_card_kira {
+  @media (min-width: 70.5em) {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
 }
 
 .footer {
