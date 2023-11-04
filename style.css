@@ -230,6 +230,10 @@ body {
 
 .testimonial_card_daniel h1 {
   margin-bottom: var(--mar-b-2_5);
+
+  @media (min-width: 70.5em) {
+    margin-bottom: var(--mar-b-1);
+  }
 }
 
 .testimonial_card_jonathan {
