@@ -1,0 +1,289 @@
+/* ----------------------------------------- */
+/* CSS Reset */
+/* ----------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* ----------------------------------------- */
+/* Custom properties */
+/* ----------------------------------------- */
+
+:root {
+  /* Colors */
+  --bg-color: hsl(210, 46%, 95%);
+  --bg-card-violet: hsl(263, 55%, 52%);
+  --bg-card-grey: hsl(217, 19%, 35%);
+  --bg-card-white: hsl(0, 0%, 100%);
+  --bg-card-black: hsl(219, 29%, 14%);
+  --text-grey-light: hsl(0, 0%, 81%);
+  --text-grey-darker: hsl(217, 19%, 35%);
+  --text-blue-light: hsl(210, 46%, 95%);
+
+  /* Padding */
+
+  --pad-tb-1: 1rem 0;
+  --pad-tb-1_25: 1.25rem 0;
+  --pad-tb-2_5-rl-2: 2.5rem 2rem;
+  --pad-rl-1_75: 0 1.75rem;
+  --pad-rl-2: 0 2rem;
+  --pad-t-1_62: 1.62rem;
+  --pad-t-1_12: 1.12rem;
+  --pad-b-1_75: 1.75rem;
+  --pad-t-2_5: 2.5rem;
+  --pad-b-2: 2rem;
+  --pad-l-2: 2rem;
+
+  /* Margins */
+  --mar-t-1_5: 1.5rem;
+  --mar-t-2: 2rem;
+  --mar-t-5: 5rem;
+  --mar-t-8: 8rem;
+  --mar-t-10_25: 10.25rem;
+  --mar-b-0_5: 0.5rem;
+  --mar-b-75: 0.75rem;
+  --mar-b-1: 1rem;
+  --mar-b-1_25: 1.25rem;
+  --mar-b-1_5: 1.5rem;
+  --mar-b-1_75: 1.75rem;
+  --mar-b-2: 2rem;
+  --mar-b-3: 3rem;
+  --mar-b-2_5: 2.5rem;
+  --mar-b-4: 4rem;
+  --mar-b-4_5: 4.5rem;
+  --mar-b-5: 5rem;
+  --mar-rl-1_5: 0 1.5rem;
+  --mar-rl-1_75: 0 1.75rem;
+  --mar-rl-2: 0 2rem;
+  --mar-r-3-l-2_5: 0 3rem 0 2.5rem;
+}
+
+/* ----------------------------------------- */
+/* General Style */
+/* ----------------------------------------- */
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  margin-top: var(--mar-t-5);
+  margin-bottom: var(--mar-b-1_5);
+  width: min(90%, 44rem);
+
+  @media (min-width: 70.5em) {
+    width: min(90%, 69.4rem);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: var(--mar-t-10_25);
+  }
+}
+
+.testimonial_card {
+  background-color: var(--bg-card-white);
+  border-radius: 0.5rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+.testimonial_card > * {
+  padding: var(--pad-rl-2);
+}
+
+.testimonial_card_daniel {
+  background-color: var(--bg-card-violet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 2rem;
+}
+
+.testimonial_card_profile {
+  padding-top: var(--pad-t-1_62);
+  display: flex;
+  align-items: center;
+  gap: 1.06rem;
+  padding-bottom: var(--pad-t-1_12);
+}
+
+.testimonial_card_img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+.testimonial_card_name {
+  line-height: 1;
+}
+
+.testimonial_card_type {
+  font-size: 0.6875rem;
+}
+
+.testimonia_card_text {
+  padding-bottom: var(--pad-b-2);
+}
+
+.testimonial_card:not(:nth-child(5)) {
+  margin-bottom: var(--mar-b-1_5);
+
+  @media (min-width: 70.5em) {
+    margin-bottom: 0;
+  }
+}
+
+.testimonial_heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--mar-b-1);
+  text-wrap: wrap;
+}
+
+.testimonial_card_daniel > * {
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_daniel .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_daniel,
+.testimonial_card_patrick {
+  @media (min-width: 70.5em) {
+    grid-column: span 2;
+  }
+}
+
+.testimonial_card_daniel h1 {
+  margin-bottom: var(--mar-b-2_5);
+
+  @media (min-width: 70.5em) {
+    margin-bottom: var(--mar-b-1);
+  }
+}
+
+.testimonial_card_jonathan {
+  background-color: var(--bg-card-grey);
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_jonathan .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_jeanette,
+.testimonial_card_kira {
+  background-color: var(--bg-card-white);
+  color: var(--bg-card-grey);
+}
+
+.testimonial_card_jonathan .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_patrick {
+  background-color: var(--bg-card-black);
+  color: var(--bg-card-white);
+}
+
+.testimonial_card_patrick .testimonial_card_type,
+.testimonial_text {
+  opacity: 50%;
+}
+
+.testimonial_card_kira {
+  @media (min-width: 70.5em) {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.footer > a {
+  color: black;
+}
+
+.footer > a:hover,
+.footer > a:active {
+  color: black;
+  cursor: pointer;
+}
